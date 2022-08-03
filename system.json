@@ -22,6 +22,6 @@
   "primaryTokenAttribute": "resolve",
   "url": "https://github.com/sevenredreturns/magicalburst",
   "manifest": "https://raw.githubusercontent.com/sevenredreturns/magicalburst/main/system.json",
-  "download": "",
+  "download": "https://github.com/sevenredreturns/magicalburst",
   "license": "LICENSE.txt"
 }
