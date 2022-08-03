@@ -20,8 +20,8 @@
   "gridDistance": 1,
   "gridUnits": "zone",
   "primaryTokenAttribute": "resolve",
-  "url": "",
-  "manifest": "",
+  "url": "https://github.com/sevenredreturns/magicalburst",
+  "manifest": "https://raw.githubusercontent.com/sevenredreturns/magicalburst/main/system.json",
   "download": "",
   "license": "LICENSE.txt"
 }
