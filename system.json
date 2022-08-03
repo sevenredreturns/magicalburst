@@ -1,0 +1,27 @@
+{
+  "name": "magicalburst",
+  "title": "Magical Burst 4.0",
+  "description": "The Magical Burst system for FoundryVTT!",
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.8.6",
+  "compatibleCoreVersion": "9",
+  "author": "melodyrose",
+  "esmodules": ["module/magicalburst.mjs"],
+  "styles": ["css/magicalburst.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 1,
+  "gridUnits": "zone",
+  "primaryTokenAttribute": "resolve",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt"
+}
