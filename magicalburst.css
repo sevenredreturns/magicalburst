@@ -1,0 +1,12 @@
+.magicalburst.sheet.talent form {
+  display: flex;
+  flex-direction: column;
+}
+.magicalburst.sheet.talent .sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.magicalburst.sheet.talent .sheet-content .editor {
+  height: 100%;
+}
