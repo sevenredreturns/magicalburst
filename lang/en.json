@@ -1,0 +1,28 @@
+{
+  "magicalburst": {
+    "overcharge": {
+      "none": "",
+      "attack": "Attack",
+      "support": "Support",
+      "defense": "Defense"
+    },
+    "action" : {
+      "main" : "Main",
+      "free" : "Free",
+      "minor" : "Minor"
+    },
+    "limit" : {
+      "none" : "",
+      "episode" : "Episode",
+      "scene" : "Scene"
+    },
+    "talent" : {
+      "actionType" : "Action Type :",
+      "overcharge" : "Overcharge:",
+      "overchargeType" : "Overcharge Type:",
+      "limit" : "Limit:",
+      "limitPer" : "Limit Per:",
+      "range": "Range"
+    }
+  }
+}

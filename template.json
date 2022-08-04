@@ -2,10 +2,25 @@
   "Actor": {},
   "Item": {
     "types": [
-      "skill"
+      "talent",
+      "dummy"
     ],
-    "skill": {
-
+    "templates" : {
+      "itemDescription": {
+        "description": ""
+      }
+    },
+    "talent": {
+      "templates": ["itemDescription"],
+      "actionType": "main",
+      "limit": 0,
+      "limitPer": "scene",
+      "overcharge": 0,
+      "overchargeType": "attack",
+      "range": 0
+    },
+    "dummy": {
+      "templates": ["itemDescription"]
     }
   }
 }
