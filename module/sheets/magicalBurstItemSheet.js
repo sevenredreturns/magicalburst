@@ -3,9 +3,9 @@ export default class magicalBurstItemSheet extends ItemSheet
     static get defaultOptions()
     {
         return mergeObject(super.defaultOptions, {
-            width  : 530,
+            width  : 768,
             height : 340,
-            classes: ["magicalburst", "sheet", "item"]
+            classes: ["magicalburst", "sheet", "talent"]
         });
     }
 

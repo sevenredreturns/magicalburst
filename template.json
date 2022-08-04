@@ -1,5 +1,55 @@
 {
-  "Actor": {},
+  "Actor": {
+    "types": [
+      "magical",
+      "youma"
+    ],
+    "templates" : {
+      "commonStats" : {
+        "attack" : 0,
+        "defense" : 0,
+        "support" : 0,
+        "resolve" : {
+          "value": 18,
+          "max" : 18
+        }
+      },
+      "appearance" : "",
+      "personality" : ""
+    },
+    "magical" : {
+      "attackType": "fury",
+      "defenseType": "heart",
+      "supportType" : "magic",
+      "attackOvercharge" : 0,
+      "defenseOvercharge" : 0,
+      "supportOvercharge" : 0,
+      "charm" : 0,
+      "insight" : 0,
+      "tenacity" : 0,
+      "magicalName" : "",
+      "pactReason" : "",
+      "wish" : "",
+      "element" : "",
+      "weapon" : "",
+      "power" : "",
+      "costume" : "",
+      "wounds" : {
+        "value": 0,
+        "min" : -5
+      },
+      "specialization" : "",
+      "crisis" : ""
+    },
+    "youma" : {
+      "power" : 0,
+      "spread" : 0,
+      "damageBonus" : 0,
+      "overcharge" : 0,
+      "oblivionSeeds" : 0,
+      "nightmareSize" : 0
+    }
+  },
   "Item": {
     "types": [
       "talent",
