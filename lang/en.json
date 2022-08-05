@@ -6,23 +6,65 @@
       "support": "Support",
       "defense": "Defense"
     },
-    "action" : {
-      "main" : "Main",
-      "free" : "Free",
-      "minor" : "Minor"
+    "action": {
+      "main": "Main",
+      "free": "Free",
+      "minor": "Minor"
     },
-    "limit" : {
-      "none" : "",
-      "episode" : "Episode",
-      "scene" : "Scene"
+    "limit": {
+      "none": "",
+      "episode": "Episode",
+      "scene": "Scene"
     },
-    "talent" : {
-      "actionType" : "Action Type :",
-      "overcharge" : "Overcharge:",
-      "overchargeType" : "Overcharge Type:",
-      "limit" : "Limit:",
-      "limitPer" : "Limit Per:",
+    "talent": {
+      "actionType": "Action Type",
+      "overcharge": "Overcharge",
+      "overchargeType": "Overcharge Type",
+      "limit": "Limit",
+      "limitPer": "Limit Per",
       "range": "Range"
+    },
+    "combatType": {
+      "heart": "Heart",
+      "fury": "Fury",
+      "magic": "Magic"
+    },
+    "stats": {
+      "attack": "Attack",
+      "defense": "Defense",
+      "support": "Support",
+      "resolve": "Resolve",
+      "wounds": "Wounds",
+      "charm": "Charm",
+      "insight": "Insight",
+      "tenacity": "Tenacity",
+      "power": "Power",
+      "spread": "Spread",
+      "damageBonus": "Damage Bonus",
+      "overcharge": "Overcharge",
+      "oblivion": "Oblivion Seeds",
+      "nightmare": "Nightmare Size"
+    },
+    "descriptors": {
+      "attackType": "Attack Type",
+      "defenseType": "Defense Type",
+      "supportType": "Support Type",
+      "realName" : "Civilian Name",
+      "magicName": "Magical Girl Name",
+      "personality": "What kind of girl are you?",
+      "appearance": "What do you look like?",
+      "pactReason": "What convinced you to make a pact?",
+      "wish": "What is your wish?",
+      "element": "Magical Element",
+      "weapon": "Magical Weapon",
+      "magicPower": "Magical Power",
+      "costume": "Magical Girl Costume",
+      "normalAtt": "Normal Attributes",
+      "magicalAtt": "Magical Attributes",
+      "specialization": "Magical Specialization",
+      "talents": "Magical Talents",
+      "crisis": "Crisis",
+      "relationships": "Relationships"
     }
   }
 }

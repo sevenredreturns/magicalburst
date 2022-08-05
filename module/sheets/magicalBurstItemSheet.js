@@ -11,7 +11,7 @@ export default class magicalBurstItemSheet extends ItemSheet
 
     get template()
     {
-        return `systems/magicalburst/templates/sheets/${this.item.data.type}-sheet.html`;
+        return `systems/magicalburst/templates/sheets/${this.item.data.type}-sheet.hbs`;
     }
 
     getData()

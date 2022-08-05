@@ -3,7 +3,7 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
-    <div class = "sheet-content">
+    <div class="sheet-content">
         <table>
             <tr>
                 <th>{{localize "magicalburst.talent.actionType"}}</th>
@@ -17,9 +17,9 @@
                 <td>
                     <select name="data.actionType">
                         {{#select data.actionType}}
-                        {{#each config.actionTypes as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
+                            {{#each config.actionTypes as |name type|}}
+                                <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
                         {{/select}}
                     </select>
                 </td>
@@ -29,9 +29,9 @@
                 <td>
                     <select name="data.overchargeType">
                         {{#select data.overchargeType}}
-                        {{#each config.overchargeTypes as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
+                            {{#each config.overchargeTypes as |name type|}}
+                                <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
                         {{/select}}
                     </select>
                 </td>
@@ -41,9 +41,9 @@
                 <td>
                     <select name="data.limitPer">
                         {{#select data.limitPer}}
-                        {{#each config.limitTypes as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
+                            {{#each config.limitTypes as |name type|}}
+                                <option value="{{type}}">{{localize name}}</option>
+                            {{/each}}
                         {{/select}}
                     </select>
                 </td>

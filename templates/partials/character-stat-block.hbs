@@ -1,0 +1,47 @@
+<section class = "stat-block">
+    <label class="stat-name">
+        <h3>
+            {{localize config.stats.resolve}}
+            <div class="stat-value">
+                <input name="data.resolve.value" type="text" value="{{data.resolve.value}}" data-dtype="Number"/>
+            </div>
+        </h3>
+    </label>
+    <label class="stat-name">
+        {{localize config.descriptors.element}}
+    </label>
+    <div class="stat-value">
+        <textarea class="actor-element" name="element">{{data.element}}</textarea>
+    </div>
+    <label class="stat-name">
+        {{localize config.descriptors.weapon}}
+    </label>
+    <div class="stat-value">
+        <textarea class="actor-weapon" name="weapon">{{data.weapon}}</textarea>
+    </div>
+    <label class="stat-name">
+        {{localize config.descriptors.magicPower}}
+    </label>
+    <div class="stat-value">
+        <textarea class="actor-magicPower" name="magicPower">{{data.magicPower}}</textarea>
+    </div>
+    <label class="stat-name">
+        {{localize config.stats.charm}}
+    </label>
+    <div class="stat-value">
+        <input name="data.charm.value" type="text" value="{{data.charm.value}}" data-dtype="Number"/>
+    </div>
+    <label class="stat-name">
+        {{localize config.stats.insight}}
+    </label>
+    <div class="stat-value">
+        <input name="data.insight.value" type="text" value="{{data.insight.value}}" data-dtype="Number"/>
+    </div>
+    <label class="stat-name">
+        {{localize config.stats.tenacity}}
+    </label>
+    <div class="stat-value">
+        <input name="data.tenacity.value" type="text" value="{{data.tenacity.value}}" data-dtype="Number"/>
+    </div>
+
+</section>

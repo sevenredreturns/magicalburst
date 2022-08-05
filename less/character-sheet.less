@@ -1,0 +1,55 @@
+.magicalburst.sheet.character {
+  textarea {
+    resize: none;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: auto 250px;
+    grid-template-rows: auto minmax(min-content, max-content);
+    row-gap: 0.5em;
+  }
+
+  .sheet-body, .left-side, .right-side {
+    gap: @defaultGap;
+  }
+
+  .sidebar {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .actor-img {
+      width: @sidebar-bg-width;
+    }
+
+    .sheet-body {
+      grid-column-start: 1;
+      grid-row-start:1;
+      display:flex;
+      flex-direction:column;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .actor-img {
+    width: 256px;
+  }
+
+  input {
+    width: 100%
+  }
+
+  select {
+    border: none;
+    text-align: center;
+  }
+
+
+
+}

@@ -18,6 +18,7 @@
       "personality" : ""
     },
     "magical" : {
+      "templates": ["commonStats", "appearance", "personality"],
       "attackType": "fury",
       "defenseType": "heart",
       "supportType" : "magic",
@@ -32,7 +33,7 @@
       "wish" : "",
       "element" : "",
       "weapon" : "",
-      "power" : "",
+      "magicPower" : "",
       "costume" : "",
       "wounds" : {
         "value": 0,
@@ -42,6 +43,7 @@
       "crisis" : ""
     },
     "youma" : {
+      "templates": ["commonStats", "appearance", "personality"],
       "power" : 0,
       "spread" : 0,
       "damageBonus" : 0,

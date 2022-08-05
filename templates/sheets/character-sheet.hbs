@@ -1,0 +1,68 @@
+<form class="{{cssClass}}" autocomplete = "off">
+    <div class = "sidebar">
+        <div class="actor-img">
+            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        </div>
+        <div class="stats">
+            {{> "systems/magicalburst/templates/partials/character-stat-block.hbs"}}
+        </div>
+    </div>
+    <div class="sheet-body">
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.realName}}</h2>
+            <input class="actor-realName" name="realName" type="text" value="{{actor.name}}" placeholder="Name" />
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <input class="actor-magicName" name="magicName" type="text" value="{{data.magicalName}}" placeholder="Name" />
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.appearance}}</h2>
+            <textarea class="actor-appearance" name="appearance">{{data.appearance}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.personality}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.pactReason}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+        <div class = "panelBorder sheet-card">
+            <h2>{{localize config.descriptors.magicName}}</h2>
+            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
+        </div>
+    </div>
+</form>
