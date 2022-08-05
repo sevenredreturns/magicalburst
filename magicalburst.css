@@ -26,6 +26,7 @@
 }
 .magicalburst.sheet.character .sidebar {
   grid-column-start: 2;
+  grid-row-start: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
