@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Milky Well";
+  src: url("fonts/MilkyWell.ttf");
+}
+@font-face {
+  font-family: "Dom Casual";
+  src: url("fonts/DomCasualStd.otf");
+}
+@font-face {
+  font-family: "Dom Casual";
+  src: url("fonts/DomCasualStd-Bold.otf");
+  font-weight: bold;
+}
 .magicalburst.sheet.talent form {
   display: flex;
   flex-direction: column;
@@ -9,6 +22,26 @@
 }
 .magicalburst.sheet.talent .sheet-content .editor {
   height: 100%;
+}
+.magicalburst.sheet .hidden {
+  display: none;
+}
+.magicalburst.sheet .panelBorder:first-child {
+  margin-top: 0em;
+}
+.magicalburst.sheet .panelBorder h2 {
+  margin-top: 10px;
+}
+.magicalburst.sheet .panelBorder h2,
+.magicalburst.sheet .panelBorder h3,
+.magicalburst.sheet .panelBorder th,
+.magicalburst.sheet .panelBorder td,
+.magicalburst.sheet .panelBorder textarea,
+.magicalburst.sheet .panelBorder p {
+  padding: 0 0.75em;
+}
+.magicalburst.sheet .sidebar {
+  gap: 0.5em;
 }
 .magicalburst.sheet.character textarea {
   resize: none;
@@ -35,22 +68,48 @@
 .magicalburst.sheet.character .sidebar .actor-img {
   width: 80%;
 }
-.magicalburst.sheet.character .sidebar .sheet-body {
+.magicalburst.sheet.character .sidebar .stat-block {
+  margin-bottom: 0.75rem;
+}
+.magicalburst.sheet.character .sidebar .stats {
+  padding: 0.5em;
+  height: 100%;
+}
+.magicalburst.sheet.character .actor-realName {
+  padding: 0 0.75rem 0;
+  margin-bottom: 0.5em;
+  height: 1.2em;
+}
+.magicalburst.sheet.character .actor-magicName {
+  padding: 0 0.75rem 0;
+  margin-bottom: 0.5em;
+  height: 1.2em;
+}
+.magicalburst.sheet.character .sheet-body {
   grid-column-start: 1;
   grid-row-start: 1;
   display: flex;
   flex-direction: column;
 }
-.magicalburst.sheet.character h1 {
-  text-align: center;
+.magicalburst.sheet.character .talents-relationships-descriptors {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
-.magicalburst.sheet.character .actor-img {
+.magicalburst.sheet.character .talents-relationships-descriptors .left-side,
+.magicalburst.sheet.character .talents-relationships-descriptors .right-side {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.actor-img > img {
   width: 256px;
 }
-.magicalburst.sheet.character input {
+input {
   width: 100%;
 }
-.magicalburst.sheet.character select {
+select {
   border: none;
   text-align: center;
 }
@@ -65,4 +124,62 @@
 .magicalburst.sheet.character .stat-block input {
   border: none;
   margin-bottom: 0.25em;
+}
+.magicalburst.sheet .overcharge-points {
+  height: fit-content;
+  padding: 0.25em;
+  display: flex;
+}
+.magicalburst.sheet .overcharge-points .overcharge-header {
+  height: 80px;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  margin-right: 0.5em;
+}
+.magicalburst.sheet .overcharge-points .impairment-editor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+}
+.magicalburst.sheet .overcharge-points .impairment-editor input {
+  height: 100%;
+  background-color: burlywood;
+  text-align: center;
+}
+.magicalburst.sheet .overcharge-points .hidden {
+  display: none;
+}
+.magicalburst.sheet .overcharge-points .overcharge {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.magicalburst.sheet .overcharge-points .overcharge .overcharge-markers {
+  display: grid;
+  grid-template-columns: repeat(var(--row-length, 30), 1fr);
+  grid-template-rows: auto auto;
+  width: fit-content;
+  text-align: center;
+  height: 100%;
+}
+.magicalburst.sheet .overcharge-points .overcharge-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.magicalburst.sheet .overcharge-points .overcharge-box {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.magicalburst.sheet .overcharge-points .overcharge-box.crossed div:after {
+  filter: invert();
 }

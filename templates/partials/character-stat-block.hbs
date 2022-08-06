@@ -1,4 +1,4 @@
-<section class = "stat-block">
+<section class="stat-block">
     <label class="stat-name">
         <h3>
             {{localize config.stats.resolve}}
@@ -11,19 +11,23 @@
         {{localize config.descriptors.element}}
     </label>
     <div class="stat-value">
-        <textarea class="actor-element" name="element">{{data.element}}</textarea>
+        <textarea class="actor-element" name="data.element" rows="1">{{data.element}}</textarea>
     </div>
     <label class="stat-name">
         {{localize config.descriptors.weapon}}
     </label>
     <div class="stat-value">
-        <textarea class="actor-weapon" name="weapon">{{data.weapon}}</textarea>
+        <textarea class="actor-weapon" name="data.weapon" rows="1">{{data.weapon}}</textarea>
     </div>
     <label class="stat-name">
         {{localize config.descriptors.magicPower}}
     </label>
     <div class="stat-value">
-        <textarea class="actor-magicPower" name="magicPower">{{data.magicPower}}</textarea>
+        <textarea class="actor-magicPower" name="data.magicPower" rows="1">{{data.magicPower}}</textarea>
+    </div>
+    <label class="stat-name">{{localize config.descriptors.specialization}}</label>
+    <div class="stat-value">
+        <textarea class="actor-specialization" name="data.specialization" rows="1">{{data.specialization}}</textarea>
     </div>
     <label class="stat-name">
         {{localize config.stats.charm}}

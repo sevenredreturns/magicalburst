@@ -22,9 +22,18 @@
       "attackType": "fury",
       "defenseType": "heart",
       "supportType" : "magic",
-      "attackOvercharge" : 0,
-      "defenseOvercharge" : 0,
-      "supportOvercharge" : 0,
+      "attackOvercharge" : {
+        "value": 0,
+        "max" : 10
+      },
+      "defenseOvercharge" : {
+        "value": 0,
+        "max" : 10
+      },
+      "supportOvercharge" : {
+        "value": 0,
+        "max" : 10
+      },
       "charm" : 0,
       "insight" : 0,
       "tenacity" : 0,
@@ -55,6 +64,7 @@
   "Item": {
     "types": [
       "talent",
+      "relationship",
       "dummy"
     ],
     "templates" : {
@@ -70,6 +80,10 @@
       "overcharge": 0,
       "overchargeType": "attack",
       "range": 0
+    },
+    "relationship" : {
+      "templates" : ["itemDescription"],
+      "rank" : 0
     },
     "dummy": {
       "templates": ["itemDescription"]

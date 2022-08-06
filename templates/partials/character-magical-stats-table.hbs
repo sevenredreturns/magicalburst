@@ -1,0 +1,98 @@
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Combat Stat</th>
+        <th>Rank</th>
+        <th>Overcharge</th>
+    </tr>
+    <tr>
+        <td>Attack</td>
+        <td>
+            <select name="data.attackType">
+                {{#select data.attackType}}
+                    {{#each config.combatTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                {{/select}}
+            </select>
+        </td>
+        <td>
+            <input name="data.attack" type="text" value="{{data.attack}}" data-dtype="Number"/>
+        </td>
+        <td>
+            <section class="overcharge-points">
+            <div class="overcharge">
+                <div class="overcharge-markers" style="--row-length: {{data.attackOvercharge.max}}">
+                    {{#times data.attackOvercharge.max}}
+                        <div class="overcharge-point" name = "attack" data-name = "attack" data-index="{{@index}}">
+                            <div class="overcharge-box {{#if (lte ../data.attackOvercharge.value @index)}}crossed{{/if}}">
+                                <div>{{@index}}</div>
+                            </div>
+                        </div>
+                    {{/times}}
+                </div>
+            </div>
+            </section>
+        </td>
+    </tr>
+    <tr>
+        <td>Defense</td>
+        <td>
+            <select name="data.defenseType">
+                {{#select data.defenseType}}
+                    {{#each config.combatTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                {{/select}}
+            </select>
+        </td>
+        <td>
+            <input name="data.defense" type="text" value="{{data.defense}}" data-dtype="Number"/>
+        </td>
+        <td>
+            <section class="overcharge-points">
+            <div class="overcharge">
+                <div class="overcharge-markers" style="--row-length: {{data.defenseOvercharge.max}}">
+                    {{#times data.defenseOvercharge.max}}
+                        <div class="overcharge-point" name ="defense" data-name = "defense" data-index="{{@index}}">
+                            <div class="overcharge-box {{#if (gte ../data.defenseOvercharge.value @index)}}crossed{{/if}}">
+                                <div>{{@index}}</div>
+                            </div>
+                        </div>
+                    {{/times}}
+                </div>
+            </div>
+            </section>
+        </td>
+    </tr>
+    <tr>
+        <td>Support</td>
+        <td>
+            <select name="data.supportType">
+                {{#select data.supportType}}
+                    {{#each config.combatTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                {{/select}}
+            </select>
+        </td>
+        <td>
+            <input name="data.support" type="text" value="{{data.support}}" data-dtype="Number"/>
+        </td>
+        <td>
+            <section class="overcharge-points">
+            <div class="overcharge">
+                <div class="overcharge-markers" style="--row-length: {{data.supportOvercharge.max}}">
+                    {{#times data.supportOvercharge.max}}
+                    <div class="overcharge-point" name="support"  data-name="support" data-index="{{@index}}">
+                        <div class="overcharge-box {{#if (gte ../data.supportOvercharge.value @index)}}crossed{{/if}}">
+                            <div>{{@index}}</div>
+                        </div>
+                    </div>
+                    {{/times}}
+                </div>
+                </div>
+                </section>
+        </td>
+    </tr>
+</table>

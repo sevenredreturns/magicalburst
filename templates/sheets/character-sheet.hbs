@@ -1,48 +1,39 @@
-<form class="{{cssClass}}" autocomplete = "off">
-    <div class = "sidebar">
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="sidebar">
         <div class="actor-img">
-            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
         </div>
         <div class="stats">
             {{> "systems/magicalburst/templates/partials/character-stat-block.hbs"}}
         </div>
     </div>
     <div class="sheet-body">
-        <div class = "panelBorder sheet-card">
+        <div class="panelBorder sheet-card">
             <h2>{{localize config.descriptors.realName}}</h2>
-            <input class="actor-realName" name="realName" type="text" value="{{actor.name}}" placeholder="Name" />
+            <input class="actor-realName" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
         </div>
-        <div class = "panelBorder sheet-card">
+        <div class="panelBorder sheet-card">
             <h2>{{localize config.descriptors.magicName}}</h2>
-            <input class="actor-magicName" name="magicName" type="text" value="{{data.magicalName}}" placeholder="Name" />
+            <input class="actor-magicName" name="data.magicalName" type="text" value="{{data.magicalName}}"
+                   placeholder="Name" />
         </div>
-        <div class = "panelBorder sheet-card">
-            <h2>{{localize config.descriptors.appearance}}</h2>
-            <textarea class="actor-appearance" name="appearance">{{data.appearance}}</textarea>
+        <div class="panelBorder sheet-card">
+            {{> "systems/magicalburst/templates/partials/character-magical-stats-table.hbs"}}
         </div>
-        <div class = "panelBorder sheet-card">
-            <h2>{{localize config.descriptors.personality}}</h2>
-            <textarea class="actor-personality" name="personality">{{data.personality}}</textarea>
-        </div>
-        <div class = "panelBorder sheet-card">
-            <h2>{{localize config.descriptors.pactReason}}</h2>
-            <textarea class="actor-pactReason" name="pactReason">{{data.pactReason}}</textarea>
-        </div>
-        <div class = "panelBorder sheet-card">
-            <h2>{{localize config.descriptors.wish}}</h2>
-            <textarea class="actor-wish" name="wish">{{data.wish}}</textarea>
-        </div>
-        <div class = "panelBorder sheet-card">
-            <h2>{{localize config.descriptors.costume}}</h2>
-            <textarea class="actor-costume" name="costume">{{data.costume}}</textarea>
-        </div>
-        <div class = "panelBorder sheet-card">
-            <h2>{{localize config.descriptors.crisis}}</h2>
-            <textarea class="actor-crisis" name="crisis">{{data.crisis}}</textarea>
-        </div>
-        <div class = "panelBorder sheet-card">
-            <h2>{{localize config.descriptors.specialization}}</h2>
-            <textarea class="actor-specialization" name="specialization">{{data.specialization}}</textarea>
+        <div class="talents-relationships-descriptors">
+            <div class="left-side item-list" data-side="0">
+                <div class="talents">
+                    <h2>{{localize config.descriptors.talents}}</h2>
+                    {{#each talents as |talent id|}}
+                        {{>  "systems/magicalburst/templates/partials/talent-card.hbs" talent config=../config inSheet=true}}
+                    {{/each}}
+                </div>
+                    {{> "systems/magicalburst/templates/partials/character-relationships.hbs"}}
+
+            </div>
+            <div class="right-side item-list" data-side="1">
+                {{> "systems/magicalburst/templates/partials/character-descriptors.hbs"}}
+            </div>
         </div>
     </div>
 </form>

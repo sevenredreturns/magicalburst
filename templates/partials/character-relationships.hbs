@@ -1,0 +1,15 @@
+    <section class="relationships panelBorder sheet-card item-list">
+        <h2>{{localize config.descriptors.relationships}}
+            <a class="item-create" data-type="relationship" title="Add a Relationship">
+                <i class="fas fa-plus"></i>
+            </a>
+        </h2>
+        {{#each relationships as |relationship id|}}
+            <div class="relationship-item item" data-item-id="{{relationship._id}}">
+                <input class="relationship-name inline-edit" data-field="name" type="text" value="{{relationship.name}}"
+                       placeholder="New Relationship"/>
+                <input class="relationship-value inline-edit" data-field="data.rank" type="text"
+                       value="{{relationship.data.rank}}" placeholder="0" data-dtype="Number"/>
+            </div>
+        {{/each}}
+    </section>
