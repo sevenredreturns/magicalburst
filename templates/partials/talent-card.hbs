@@ -1,11 +1,11 @@
-<div class="item talent-border sheet-card {{data.type}}" data-type="{{data.type}}" data-item-id="{{_id}}">
+<div class="item talent-border sheet-card {{data.type}}" data-type="{{data.overchargeType}}" data-item-id="{{_id}}">
     <div class="talent-card">
-        <div class="talent-name">
-            <h2>{{name}}</h2>
-        </div>
+        <div class="talent-name">{{name}}</div>
+        <section class="talent-costs">
         <div class="talent-action">{{{data.actionType}}} action</div>
         <div class="talent-limit">{{{data.limit}}}/{{{data.limitPer}}}</div>
-        <div class="talent-overcharge>">{{{data.overcharge}}} overcharge ({{{data.overchargeType}}})</div>
+        <div class="talent-overcharge">{{{data.overcharge}}} overcharge ({{{data.overchargeType}}})</div>
+        </section>
         <div class="talent-description">{{{data.description}}}</div>
     </div>
 </div>

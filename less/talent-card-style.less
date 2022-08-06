@@ -1,0 +1,35 @@
+.magicalburst {
+  .talent-card {
+    .talent-description {
+      .DomCasual();
+    }
+
+    .talent-action, .talent-limit, .talent-overcharge {
+      .DomCasual(bold);
+    }
+  }
+
+  .talent-border {
+    @talent-types: attack, defense, support, none;
+
+    each(@talent-types, {
+      @main-color: "@{value}-main-color";
+      @bg-color: "@{value}-bg-color";
+
+      &[data-type="@{value}"] {
+        .talent-appearance(@@main-color, @@bg-color);
+      }
+    })
+  }
+
+  .talent-appearance(@talent-main-color: @main-color, @talent-accent-color: @sheet-background) {
+    .clippedBorder(@talent-main-color, 2px, @talent-accent-color, @defaultCornerClip);
+
+    .talent-name {
+      .MilkyWell();
+      font-size:1.2rem;
+      background-color: @talent-main-color;
+      color: black;
+    }
+  }
+}

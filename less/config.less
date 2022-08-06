@@ -31,7 +31,7 @@
 //Colors
 @main-color: #ff85d5;
 @accent-color: white;
-@hud-bg: rgba(0,0,0,0.6);
+@hud-bg: rgba(0, 0, 0, 0.6);
 
 @attack-main-color: #ff3a5a;
 @attack-bg-color: #ff99aa;
@@ -39,6 +39,8 @@
 @defense-bg-color: #8ab6ff;
 @support-main-color: #e4c95c;
 @support-bg-color: #fff2bc;
+@none-main-color: #43b355;
+@none-bg-color: #c0fbca;
 
 @button-border-thickness: 2px;
 
@@ -216,3 +218,43 @@
     bottom: 0;
   }
 }
+
+.roundedBorder(@color: @main-color,
+  @borderThickness: 4px,
+  @background: @accent-color,
+  @contextMenu: false) {
+  position: relative;
+  border: none;
+
+  & when (@contextMenu =false) {
+    background: @background;
+  }
+
+  & when (@contextMenu =true) {
+    background: none;
+
+    &::before {
+      content: "";
+      background: @background;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      .clipCorners(@clipSize);
+      z-index: -1;
+    }
+  }
+
+  &::after {
+    content: "";
+    border-radius: 25px;
+    background: @color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+

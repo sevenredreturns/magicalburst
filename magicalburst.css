@@ -202,13 +202,205 @@ select {
 .magicalburst.sheet .relationships .relationship-item .relationship-rank {
   width: 3ch;
 }
-magicalburst.sheet.character .window-content {
+.magicalburst .talent-border .talent-costs {
+  font-size: 1.2em;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 0.75em;
+  grid-template-rows: auto auto;
+  width: fit-content;
+}
+.magicalburst .talent-border .talent-costs div {
+  width: fit-content;
+  text-align: center;
+}
+.magicalburst.sheet.character .window-content {
+  text-transform: none;
+  font-family: "Milky Well", fantasy;
+  font-weight: normal;
+}
+.magicalburst.sheet.character .window-content select {
+  text-transform: none;
+  font-family: "Milky Well", fantasy;
+  font-weight: normal;
+}
+.magicalburst.sheet.character .window-content h2 {
+  font-size: 1.2rem;
+}
+.magicalburst.sheet.character .window-content input,
+.magicalburst.sheet.character .window-content select,
+.magicalburst.sheet.character .window-content textarea {
+  background: none;
+  border: none;
+}
+.magicalburst.sheet.character .window-content h1,
+.magicalburst.sheet.character .window-content h2 {
+  border: none;
+}
+.magicalburst.sheet.character .actor-realName {
+  font-family: "Dom Casual", sans-serif;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.magicalburst.sheet.character .actor-magicName {
+  font-family: "Dom Casual", sans-serif;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.magicalburst.sheet.character textarea {
+  font-family: "Dom Casual", sans-serif;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.magicalburst.sheet.character .actor-img,
+.magicalburst.sheet.character .panelBorder {
+  position: relative;
+  border: none;
+  background: white;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.magicalburst.sheet.character .actor-img::after,
+.magicalburst.sheet.character .panelBorder::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #ff85d5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.magicalburst.sheet.character .stats {
+  background-color: #ff85d5;
+  clip-path: polygon(5px 0px, calc(100% - 5px) 0px, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 5px 100%, 5px 100%, 0px calc(100% - 5px), 0px 5px);
+}
+.magicalburst.sheet.character .stat-block .stat-value,
+.magicalburst.sheet.character .stat-block .stat-value > * {
   font-family: "Dom Casual", sans-serif;
   text-transform: none;
   font-weight: bold;
 }
-magicalburst.sheet.character .window-content select {
+.magicalburst.sheet.character .stat-block .stat-name {
+  font-size: 1.3rem;
+}
+.magicalburst.sheet.character .stat-block .stat-name,
+.magicalburst.sheet.character .stat-block .stat-name > * {
+  color: white;
+  background-color: #ff85d5;
+}
+.magicalburst.sheet.character .stat-block .stat-value {
+  font-size: 1.8rem;
+  background-color: white;
+  clip-path: polygon(5px 0px, calc(100% - 5px) 0px, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 5px 100%, 5px 100%, 0px calc(100% - 5px), 0px 5px);
+}
+.magicalburst .talent-card .talent-description {
+  font-family: "Dom Casual", sans-serif;
+  text-transform: none;
+  font-weight: normal;
+}
+.magicalburst .talent-card .talent-action,
+.magicalburst .talent-card .talent-limit,
+.magicalburst .talent-card .talent-overcharge {
+  font-family: "Dom Casual", sans-serif;
+  text-transform: none;
+  font-weight: bold;
+}
+.magicalburst .talent-border[data-type="attack"] {
+  position: relative;
+  border: none;
+  background: #ff99aa;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.magicalburst .talent-border[data-type="attack"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #ff3a5a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.magicalburst .talent-border[data-type="attack"] .talent-name {
   text-transform: none;
   font-family: "Milky Well", fantasy;
   font-weight: normal;
+  font-size: 1.2rem;
+  background-color: #ff3a5a;
+  color: black;
+}
+.magicalburst .talent-border[data-type="defense"] {
+  position: relative;
+  border: none;
+  background: #8ab6ff;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.magicalburst .talent-border[data-type="defense"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #3877df;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.magicalburst .talent-border[data-type="defense"] .talent-name {
+  text-transform: none;
+  font-family: "Milky Well", fantasy;
+  font-weight: normal;
+  font-size: 1.2rem;
+  background-color: #3877df;
+  color: black;
+}
+.magicalburst .talent-border[data-type="support"] {
+  position: relative;
+  border: none;
+  background: #fff2bc;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.magicalburst .talent-border[data-type="support"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #e4c95c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.magicalburst .talent-border[data-type="support"] .talent-name {
+  text-transform: none;
+  font-family: "Milky Well", fantasy;
+  font-weight: normal;
+  font-size: 1.2rem;
+  background-color: #e4c95c;
+  color: black;
+}
+.magicalburst .talent-border[data-type="none"] {
+  position: relative;
+  border: none;
+  background: #c0fbca;
+  clip-path: polygon(8px 0px, calc(100% - 8px) 0px, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 8px 100%, 8px 100%, 0px calc(100% - 8px), 0px 8px);
+}
+.magicalburst .talent-border[data-type="none"]::after {
+  clip-path: polygon(calc(100% - 8px) 0%, 8px 0%, 0% 8px, 0% calc(100% - 8px), 8px 100%, calc(2px + 8px) calc(100% - 2px), 2px calc(100% - 2px - 8px), 2px calc(2px + 8px), calc(2px + 8px) 2px, calc(100% - 2px - 8px) 2px, calc(100% - 2px) calc(2px + 8px), calc(100% - 2px) calc(100% - 2px - 8px), calc(100% - 2px - 8px) calc(100% - 2px), calc(2px + 8px) calc(100% - 2px), 8px 100%, calc(100% - 8px) 100%, 100% calc(100% - 8px), 100% 8px);
+  content: "";
+  background: #43b355;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.magicalburst .talent-border[data-type="none"] .talent-name {
+  text-transform: none;
+  font-family: "Milky Well", fantasy;
+  font-weight: normal;
+  font-size: 1.2rem;
+  background-color: #43b355;
+  color: black;
 }

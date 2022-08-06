@@ -1,9 +1,46 @@
-magicalburst.sheet.character {
+.magicalburst.sheet.character {
   .window-content {
-    .DomCasual(bold);
+    .MilkyWell(normal);
 
     select{
       .MilkyWell(normal);
     }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    input, select, textarea {
+      background: none;
+      border: none;
+    }
+
+    h1, h2 {
+      border: none;
+    }
+  }
+
+  .actor-realName {
+    .DomCasual(bold);
+    font-size: 1.4rem;
+  }
+
+  .actor-magicName {
+    .DomCasual(bold);
+    font-size: 1.4rem;
+  }
+
+  textarea {
+    .DomCasual();
+    font-size: 1.2rem;
+  }
+
+  .actor-img, .panelBorder {
+    .clippedBorder(@main-color, 2px, @accent-color, @defaultCornerClip);
+  }
+
+  .stats {
+    background-color: @main-color;
+    .clipCorners(@bevel-size);
   }
 }

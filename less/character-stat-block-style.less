@@ -1,0 +1,22 @@
+.magicalburst.sheet.character {
+  .stat-block {
+    .stat-value, .stat-value > *{
+      .DomCasual(bold);
+    }
+
+    .stat-name {
+      font-size: 1.3rem;
+    }
+
+    .stat-name, .stat-name > * {
+      color: @accent-color;
+      background-color: @main-color;
+    }
+
+    .stat-value {
+      font-size: 1.8rem;
+      background-color: @accent-color;
+      .clipCorners(@bevel-size);
+    }
+  }
+}
