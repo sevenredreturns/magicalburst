@@ -2,7 +2,7 @@
   "name": "magicalburst",
   "title": "Magical Burst 4.0",
   "description": "The Magical Burst system for FoundryVTT!",
-  "version": 0.01,
+  "version": 0.05,
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "author": "melodyrose",
