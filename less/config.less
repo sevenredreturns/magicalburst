@@ -16,7 +16,203 @@
   font-weight: bold;
 }
 
+.MilkyWell(@weight: normal) {
+  text-transform: none;
+  font-family: "Milky Well", fantasy;
+  font-weight: @weight;
+}
+
+.DomCasual(@weight: normal) {
+  font-family: "Dom Casual", sans-serif;
+  text-transform: none;
+  font-weight: @weight;
+}
+
+//Colors
+@main-color: #ff85d5;
+@accent-color: white;
+@hud-bg: rgba(0,0,0,0.6);
+
+@attack-main-color: #ff3a5a;
+@attack-bg-color: #ff99aa;
+@defense-main-color: #3877df;
+@defense-bg-color: #8ab6ff;
+@support-main-color: #e4c95c;
+@support-bg-color: #fff2bc;
+
+@button-border-thickness: 2px;
+
+.white-on-pink() {
+  background-color: @main-color;
+  color: @accent-color;
+}
+
+.pink-carpet() {
+  &::before {
+    content: "";
+    background: @main-color;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    bottom: 0;
+    z-index: -1;
+    .clipCorners();
+  }
+}
+
+.canvas-shadow() {
+  filter: drop-shadow(0 0 10px black);
+}
+
+.input-shadow() {
+  box-shadow: 0 0 4px #000 inset;
+}
+
+// Bevels
+@bevel-size: 5px;
+@shtick-bevel: 15px;
+@defaultCornerClip: 8px;
 
 // Layout
 @defaultGap: 0.75em;
+@milkyBottomPadding: 0.25em;
 @sidebar-bg-width: 80%;
+@sidebar-bg-position: calc((100% - @sidebar-bg-width) / 2);
+
+// Functions
+.clipBottom(@bevel: @defaultCornerClip) {
+  clip-path: polygon(100% 0px,
+  100% calc(100% - @bevel),
+  calc(100% - @bevel) 100%,
+  @bevel 100%,
+  @bevel 100%,
+  @bevel 100%,
+  0px calc(100% - @bevel),
+  0px 0px);
+}
+
+.clipCost(@bevel: @defaultCornerClip) {
+  clip-path: polygon(calc(100% - @bevel) 0px,
+  100% @bevel,
+  100% 100%,
+  @bevel 100%,
+  @bevel 100%,
+  @bevel 100%,
+  0px calc(100% - @bevel),
+  0px 0px);
+}
+
+.clipTop(@bevel: @defaultCornerClip) {
+  clip-path: polygon(@bevel 0px,
+  calc(100% - @bevel) 0px,
+  100% @bevel,
+  100% 100%,
+  0px 100%,
+  0px 100%,
+  0px 100%,
+  0px @bevel);
+}
+
+.clipRight(@bevel: @defaultCornerClip) {
+  clip-path: polygon(0px 0px,
+  calc(100% - @bevel) 0px,
+  100% @bevel,
+  100% calc(100% - @bevel),
+  calc(100% - @bevel) 100%,
+  0px 100%);
+}
+
+.clipLeft(@bevel: @defaultCornerClip) {
+  clip-path: polygon(@bevel 0px,
+  100% 0px,
+  100% 100%,
+  @bevel 100%,
+  @bevel 100%,
+  @bevel 100%,
+  0px calc(100% - @bevel),
+  0px @bevel);
+}
+
+.clipCorners(@bevel: @defaultCornerClip) {
+  clip-path: polygon(@bevel 0px,
+  calc(100% - @bevel) 0px,
+  100% @bevel,
+  100% calc(100% - @bevel),
+  calc(100% - @bevel) 100%,
+  @bevel 100%,
+  @bevel 100%,
+  @bevel 100%,
+  0px calc(100% - @bevel),
+  0px @bevel);
+}
+
+.cancelClippedBorder() {
+  clip-path: none;
+
+  &::before {
+    content: none;
+  }
+
+  &::after {
+    content: none;
+  }
+}
+
+.clippedBorder(@color: @main-color,
+  @borderThickness: 4px,
+  @background: @accent-color,
+  @clipSize: @defaultCornerClip,
+  @contextMenu: false) {
+  position: relative;
+  border: none;
+
+  & when (@contextMenu =false) {
+    background: @background;
+    .clipCorners(@clipSize);
+  }
+
+  & when (@contextMenu =true) {
+    background: none;
+
+    &::before {
+      content: "";
+      background: @background;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      .clipCorners(@clipSize);
+      z-index: -1;
+    }
+  }
+
+  &::after {
+    clip-path: polygon(calc(100% - @clipSize) 0%,
+    @clipSize 0%,
+    0% @clipSize,
+    0% calc(100% - @clipSize),
+    @clipSize 100%,
+    calc(@borderThickness + @clipSize) calc(100% - @borderThickness),
+    @borderThickness calc(100% - @borderThickness - @clipSize),
+    @borderThickness calc(@borderThickness + @clipSize),
+    calc(@borderThickness + @clipSize) @borderThickness,
+    calc(100% - @borderThickness - @clipSize) @borderThickness,
+    calc(100% - @borderThickness) calc(@borderThickness + @clipSize),
+    calc(100% - @borderThickness) calc(100% - @borderThickness - @clipSize),
+    calc(100% - @borderThickness - @clipSize) calc(100% - @borderThickness),
+    calc(@borderThickness + @clipSize) calc(100% - @borderThickness),
+    @clipSize 100%,
+    calc(100% - @clipSize) 100%,
+    100% calc(100% - @clipSize),
+    100% @clipSize);
+    content: "";
+    background: @color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -183,3 +183,32 @@ select {
 .magicalburst.sheet .overcharge-points .overcharge-box.crossed div:after {
   filter: invert();
 }
+.magicalburst.sheet .relationships {
+  display: flex;
+  flex-direction: column;
+}
+.magicalburst.sheet .relationships h2 {
+  display: flex;
+  flex-direction: row;
+}
+.magicalburst.sheet .relationships h2 .item-create {
+  margin-left: auto;
+}
+.magicalburst.sheet .relationships .relationship-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0.25em 0.5em;
+}
+.magicalburst.sheet .relationships .relationship-item .relationship-rank {
+  width: 3ch;
+}
+magicalburst.sheet.character .window-content {
+  font-family: "Dom Casual", sans-serif;
+  text-transform: none;
+  font-weight: bold;
+}
+magicalburst.sheet.character .window-content select {
+  text-transform: none;
+  font-family: "Milky Well", fantasy;
+  font-weight: normal;
+}
