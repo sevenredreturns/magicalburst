@@ -62,7 +62,17 @@
     position: relative;
 
     &.crossed div:after {
-      filter: invert();
+      position: absolute;
+      content: '';
+      background: @main-color;
+      width: 100%;
+      height: 5px;
+      transform: rotate(-45deg);
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
 
   }

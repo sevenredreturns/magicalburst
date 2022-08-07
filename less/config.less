@@ -16,6 +16,50 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Cheeky Rabbit";
+  src: url("fonts/Cheeky Rabbit.ttf");
+}
+
+@font-face {
+  font-family: "Comic Neue Sans";
+  src: url("fonts/ComicNeueSansID.ttf");
+}
+
+@font-face {
+  font-family: "Hey Comic";
+  src: url("fonts/Hey Comic.otf");
+}
+
+@font-face {
+  font-family: "Mangaka";
+  src: url("fonts/Mangaka.otf");
+}
+
+@font-face{
+  font-family: "Komika Text";
+  src: url("fonts/KOMTXT__.ttf");
+}
+
+@font-face{
+  font-family: "Komika Text";
+  src: url("fonts/KOMTXTB_.ttf");
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: "Komika Text";
+  src: url("fonts/KOMTXTI_.ttf");
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Komika Text";
+  src: url("fonts/KOMTXTBI.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
 .MilkyWell(@weight: normal) {
   text-transform: none;
   font-family: "Milky Well", fantasy;
@@ -28,19 +72,51 @@
   font-weight: @weight;
 }
 
+.CheekyRabbit(@weight: normal) {
+  text-transform: none;
+  font-family: "Cheeky Rabbit";
+  font-weight: @weight;
+}
+
+.ComicNeueSans(@weight: normal) {
+  text-transform: none;
+  font-family: "Comic Neue Sans";
+  font-weight: @weight;
+}
+
+.HeyComic(@weight: normal) {
+  text-transform: none;
+  font-family: "Hey Comic";
+  font-weight: @weight;
+}
+
+.Komika(@weight: normal) {
+  text-transform: none;
+  font-family: "Komika Text";
+  font-weight: @weight;
+}
+
+.Mangaka(@weight: normal) {
+  text-transofrm: none;
+  font-family: "Mangaka";
+  font-weight: @weight;
+}
+
 //Colors
-@main-color: #ff85d5;
+@main-color: #e8a9d2;
 @accent-color: white;
+@sheet-background: white;
+@text-color: #5b4863;
 @hud-bg: rgba(0, 0, 0, 0.6);
 
-@attack-main-color: #ff3a5a;
-@attack-bg-color: #ff99aa;
-@defense-main-color: #3877df;
-@defense-bg-color: #8ab6ff;
-@support-main-color: #e4c95c;
-@support-bg-color: #fff2bc;
-@none-main-color: #43b355;
-@none-bg-color: #c0fbca;
+@attack-main-color: #fc90a0;
+@attack-bg-color: #ffc0c9;
+@defense-main-color: #70a2f6;
+@defense-bg-color: #b7d2ff;
+@support-main-color: #fde499;
+@support-bg-color: #fff5d3;
+@none-main-color: #a8ffb6;
+@none-bg-color: #dbffe0;
 
 @button-border-thickness: 2px;
 

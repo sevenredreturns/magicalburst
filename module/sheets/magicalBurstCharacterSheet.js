@@ -15,6 +15,7 @@ export default class magicalBurstCharacterSheet extends ActorSheet
             icon: '<i class="fas fa-edit"></i>',
             callback: element => {
                 const item=this.actor.items.get(element.data("item-id"));
+                console.log(item);
                 item.sheet.render(true);
             }
         },
@@ -101,6 +102,7 @@ export default class magicalBurstCharacterSheet extends ActorSheet
         event.preventDefault();
         let element = event.currentTarget;
         let itemId = element.closest(".item").dataset.itemId;
+        console.log(itemId);
         return this.actor.deleteEmbeddedDocuments("Item", [itemId]);
     }
 

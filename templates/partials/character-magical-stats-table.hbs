@@ -25,7 +25,7 @@
                 <div class="overcharge-markers" style="--row-length: {{data.attackOvercharge.max}}">
                     {{#times data.attackOvercharge.max}}
                         <div class="overcharge-point" name = "attack" data-name = "attack" data-index="{{@index}}">
-                            <div class="overcharge-box {{#if (lte ../data.attackOvercharge.value @index)}}crossed{{/if}}">
+                            <div class="overcharge-box {{#if (gte ../data.attackOvercharge.value @index)}}crossed{{/if}}">
                                 <div>{{@index}}</div>
                             </div>
                         </div>

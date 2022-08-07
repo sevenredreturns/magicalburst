@@ -1,11 +1,11 @@
 .magicalburst {
   .talent-card {
     .talent-description {
-      .DomCasual();
+      .Komika();
     }
 
     .talent-action, .talent-limit, .talent-overcharge {
-      .DomCasual(bold);
+      .Komika(bold);
     }
   }
 
@@ -20,6 +20,11 @@
         .talent-appearance(@@main-color, @@bg-color);
       }
     })
+
+    #context-menu.expand-down {
+      top: 0;
+    }
+
   }
 
   .talent-appearance(@talent-main-color: @main-color, @talent-accent-color: @sheet-background) {
@@ -29,7 +34,7 @@
       .MilkyWell();
       font-size:1.2rem;
       background-color: @talent-main-color;
-      color: black;
+      color: @text-color;
     }
   }
 }
