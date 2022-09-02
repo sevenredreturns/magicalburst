@@ -2,20 +2,105 @@
 
   table {
     background-color: @sheet-background;
+    .Komika();
+
+    th {
+      background-color: @main-color;
+      color: @text-color;
+      .MilkyWell();
+    }
+
+    select {
+      .Komika(bold);
+      color: @text-color;
+
+      option {
+        .Komika();
+        color: @text-color;
+      }
+    }
+
+
+
+    .attack-row-name {
+      background-color: @attack-main-color;
+      color: @text-color;
+      .Komika(bold);
+    }
+
+    .attack-row-value {
+      background-color: @attack-bg-color;
+      color: @text-color;
+      .CheekyRabbit()
+    }
+
+    .defense-row-name {
+      background-color: @defense-main-color;
+      color: @text-color;
+      .Komika(bold);
+    }
+
+    .defense-row-value {
+      background-color: @defense-bg-color;
+      color: @text-color;
+      .CheekyRabbit()
+    }
+
+    .support-row-name {
+      background-color: @support-main-color;
+      color: @text-color;
+      .Komika(bold);
+    }
+
+    .support-row-value {
+      background-color: @support-bg-color;
+      color: @text-color;
+      .CheekyRabbit()
+    }
   }
 
+  .attack-overcharge {background-color: @attack-bg-color;}
+  .defense-overcharge {background-color: @defense-bg-color;}
+  .support-overcharge {background-color: @support-bg-color;}
 
-  .overcharge-points {
-    background-color: @main-color;
+  .attack-overcharge-points {
+    background-color: @attack-bg-color;
 
     .overcharge-point {
       .CheekyRabbit();
     }
 
-    .overcharge-box {
+    .attack-overcharge-box {
       font-size: 0.87rem;
-      background-color: @accent-color;
-      .clippedBorder(@main-color, 2px, @accent-color, 30%);
+      background-color: @attack-main-color;
+      .clippedBorder(@attack-main-color, 2px, @accent-color, 30%);
+    }
+  }
+
+  .defense-overcharge-points {
+    background-color: @defense-bg-color;
+
+    .overcharge-point {
+      .CheekyRabbit();
+    }
+
+        .defense-overcharge-box {
+      font-size: 0.87rem;
+      background-color: @defense-main-color;
+      .clippedBorder(@defense-main-color, 2px, @accent-color, 30%);
+    }
+    }
+
+  .support-overcharge-points {
+    background-color: @support-bg-color;
+
+    .overcharge-point {
+      .CheekyRabbit();
+    }
+    .support-overcharge-box {
+      font-size: 0.87rem;
+      background-color: @support-main-color;
+      .clippedBorder(@support-main-color, 2px, @accent-color, 30%);
     }
   }
 }

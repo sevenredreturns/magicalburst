@@ -6,26 +6,26 @@
         <th>Overcharge</th>
     </tr>
     <tr>
-        <td>Attack</td>
-        <td>
-            <select name="data.attackType">
+        <td class = "attack-row-name">Attack</td>
+        <td class = "attack-row-value">
+            <select name="data.attackType" class = "row-value">
                 {{#select data.attackType}}
                     {{#each config.combatTypes as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
+                        <option  class = "row-value" value="{{type}}">{{localize name}}</option>
                     {{/each}}
                 {{/select}}
             </select>
         </td>
-        <td>
+        <td class = "attack-row-value">
             <input name="data.attack" type="text" value="{{data.attack}}" data-dtype="Number"/>
         </td>
-        <td>
-            <section class="overcharge-points">
-            <div class="overcharge">
+        <td class = "attack-row-value">
+            <section class="attack-overcharge-points">
+            <div class="attack-overcharge">
                 <div class="overcharge-markers" style="--row-length: {{data.attackOvercharge.max}}">
                     {{#times data.attackOvercharge.max}}
                         <div class="overcharge-point" name = "attack" data-name = "attack" data-index="{{@index}}">
-                            <div class="overcharge-box {{#if (gte ../data.attackOvercharge.value @index)}}crossed{{/if}}">
+                            <div class="attack-overcharge-box {{#if (gte ../data.attackOvercharge.value @index)}}crossed{{/if}}">
                                 <div>{{@index}}</div>
                             </div>
                         </div>
@@ -36,8 +36,8 @@
         </td>
     </tr>
     <tr>
-        <td>Defense</td>
-        <td>
+        <td class = "defense-row-name">Defense</td>
+        <td class = "defense-row-value">
             <select name="data.defenseType">
                 {{#select data.defenseType}}
                     {{#each config.combatTypes as |name type|}}
@@ -46,16 +46,16 @@
                 {{/select}}
             </select>
         </td>
-        <td>
+        <td class = "defense-row-value">
             <input name="data.defense" type="text" value="{{data.defense}}" data-dtype="Number"/>
         </td>
-        <td>
-            <section class="overcharge-points">
-            <div class="overcharge">
+        <td class = "defense-row-value">
+            <section class="defense-overcharge-points">
+            <div class="defense-overcharge">
                 <div class="overcharge-markers" style="--row-length: {{data.defenseOvercharge.max}}">
                     {{#times data.defenseOvercharge.max}}
                         <div class="overcharge-point" name ="defense" data-name = "defense" data-index="{{@index}}">
-                            <div class="overcharge-box {{#if (gte ../data.defenseOvercharge.value @index)}}crossed{{/if}}">
+                            <div class="defense-overcharge-box {{#if (gte ../data.defenseOvercharge.value @index)}}crossed{{/if}}">
                                 <div>{{@index}}</div>
                             </div>
                         </div>
@@ -66,8 +66,8 @@
         </td>
     </tr>
     <tr>
-        <td>Support</td>
-        <td>
+        <td class = "support-row-name">Support</td>
+        <td class = "support-row-value">
             <select name="data.supportType">
                 {{#select data.supportType}}
                     {{#each config.combatTypes as |name type|}}
@@ -76,16 +76,16 @@
                 {{/select}}
             </select>
         </td>
-        <td>
+        <td class = "support-row-value">
             <input name="data.support" type="text" value="{{data.support}}" data-dtype="Number"/>
         </td>
-        <td>
-            <section class="overcharge-points">
-            <div class="overcharge">
+        <td class = "support-row-value">
+            <section class="support-overcharge-points">
+            <div class="support-overcharge">
                 <div class="overcharge-markers" style="--row-length: {{data.supportOvercharge.max}}">
                     {{#times data.supportOvercharge.max}}
                     <div class="overcharge-point" name="support"  data-name="support" data-index="{{@index}}">
-                        <div class="overcharge-box {{#if (gte ../data.supportOvercharge.value @index)}}crossed{{/if}}">
+                        <div class="support-overcharge-box {{#if (gte ../data.supportOvercharge.value @index)}}crossed{{/if}}">
                             <div>{{@index}}</div>
                         </div>
                     </div>
